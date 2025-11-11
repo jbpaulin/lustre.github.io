@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- css link -->
+     <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
@@ -16,18 +17,21 @@
         <h1>LUSTRE</h1> <!-- pwede rin yung ano parang text lang na logo -->
         <nav>
             <a href="home.html">HOME</a>
-            <a href="catalog.html">CATALOG</a>
-            <a href="signup.html">SIGN UP</a>
+            <div class="dropdown">
+                <span>CATALOG <i class="fa-solid fa-chevron-down"></i></span>
+                <div class="dropdown-content">
+                    <a href="graphic-designs.html">Graphic Designs</a>
+                    <a href="3d-models.html">3D Models</a>
+                    <a href="2d-animations.html">2D Animations</a>
+                </div>
+            </div>
+            <button onclick="window.location.href='sign-up.html'">SIGN UP</button>
         </nav>
     </header>
 
     <main>
         <section>
-            <button>GRAPHIC DESIGNS</button>
-            <button>3D MODELS</button>
-            <button>2D ANIMATIONS</button>
-        </section>
-        <section>
+            <h3>WELCOME TO</h3>
             <h2>LUSTRE</h2> <!-- pwede din mismong logo -->
             <p>DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION</p>
         </section>
@@ -48,6 +52,29 @@
                     <img src="" alt="artwork 3">
                     <p>Artwork Title 3</p>
                     <p>2D Animation</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>FEATURED ARTISTS</h2>
+            <div>
+                <div>
+                    <img src="" alt="Ianne Dela Cruz">
+                    <p>Ianne Dela Cruz</p>
+                    <P>Description</P>
+                    <a href="graphic-designs.html">See more...</a>
+                </div>
+                <div>
+                    <img src="" alt="Bea Magat">
+                    <p>Bea Magat</p>
+                    <P>Description</P>
+                    <a href="#">See more...</a>
+                </div>
+                <div>
+                    <img src="" alt="Jonah Paulin">
+                    <p>Jonah Paulin</p>
+                    <P>Description</P>
+                    <a href="#">See more...</a>
                 </div>
             </div>
         </section>
