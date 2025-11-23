@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <img src="" alt="LUSTRE logo">
         <!-- pwede rin yung ano parang text lang na logo -->
         <nav>
@@ -67,6 +67,32 @@
             </div>
             <!-- Add more artwork items as needed -->
         </section>
+
+        <aside id="popupOverlay" class="overlay">
+            <dialog class="popup-content" open>
+                <button id="closePopup" class="close">&times;</button>
+
+                <div class="media-container">
+                    <video id="popup-contentVideo" controls></video>
+                </div>
+
+                <aside class="comment-panel">
+                    <h3>Comments</h3>
+                    <div id="commentList" class="comment-list"></div>
+
+                    <div class="add-comment">
+                        <textarea id="commentInput" placeholder="Add a comment..."></textarea>
+                        <button id="postComment">Post</button>
+                    </div>
+                </aside>
+            </dialog>
+        </aside>
+
+        <div>
+            <a href="#header">
+                <button>BACK TO TOP</button>
+            </a>
+        </div>
     </main>
 
     <footer> <!-- contacts and copyright -->
