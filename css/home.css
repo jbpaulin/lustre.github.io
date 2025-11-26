@@ -1,77 +1,138 @@
-/* ---------------- RESET EVERYTHING ---------------- */
+/* ================= GLOBAL ================ */
+
 html, body {
     margin: 0;
     padding: 0;
-    background: #ffffff !important; /* whole page stays white */
-    font-family: 'Inter', sans-serif;
+    background: white !important; 
+    font-family: Inter, sans-serif;
 }
 
-/* ---------------- HERO (ONLY SECTION WITH BLUE BG) ---------------- */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* keeps everything centered */
+}
+
+section {
+    width: 100%;
+    max-width: 1200px;  /* keeps everything aligned consistently */
+    margin: 40px auto;
+}
+
+
+
+/* ================= HERO (ONLY BLUE AREA) ================ */
+
 .hero {
     width: 100%;
-    background-color: #405d85 !important; /* blue only here */
+    background-color: #405d85 !important;
     display: flex;
     justify-content: center;
     overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 .hero-inner {
     width: 100%;
     max-width: 1800px;
-    display: flex;
 }
 
 .hero-image {
     width: 100%;
-    height: auto;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
 }
 
-/* -------------------- CAROUSEL ---------------------- */
+
+
+/* ================= DIVIDER ================ */
+
+.divider {
+    text-align: center;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.divider span {
+    font-size: 24px;
+}
+
+
+
+/* ================= CAROUSEL ================ */
+
 .latest-artworks-carousel {
     text-align: center;
-    background: #ffffff !important;
 }
 
 .carousel-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.carousel-btn {
-    background: none;
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
+    justify-content: center;
+    gap: 15px;
 }
 
 .carousel-track {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+    padding-bottom: 10px;
 }
 
 .carousel-item {
     min-width: 300px;
+    background: white;
     margin: 10px;
-    background: #ffffff !important;
+    text-align: center;
 }
 
-/* ---------------- FEATURED ARTISTS ------------------ */
+.carousel-item img,
+.carousel-item video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+/* ================= FEATURED ARTISTS ================ */
+
 .featured-artists {
     text-align: center;
-    background: #ffffff !important;
 }
 
 .artist-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
 }
 
-/* ---------------- POPUP ------------------ */
+.artist-grid div {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.artist-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+
+/* ================= POPUP ================ */
+
 .overlay {
     display: none;
 }
@@ -85,14 +146,11 @@ html, body {
     padding: 10px;
 }
 
-/* ---------------- BACK TO TOP ------------------ */
+
+
+/* ================= BACK TO TOP ================ */
+
 .back-to-top-container {
     text-align: center;
-    margin: 20px 0;
-    background: #ffffff !important;
-}
-
-/* ---------------- OTHER SECTIONS FORCE WHITE ---------------- */
-section, main, footer, header, nav, .divider {
-    background: #ffffff !important;
+    margin: 40px 0;
 }
