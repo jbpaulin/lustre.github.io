@@ -1,16 +1,23 @@
-/* ---------------- HERO (FIXED FULL WIDTH, NO WHITE SIDES) ---------------- */
+/* ---------------- RESET EVERYTHING ---------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff !important; /* whole page stays white */
+    font-family: 'Inter', sans-serif;
+}
 
+/* ---------------- HERO (ONLY SECTION WITH BLUE BG) ---------------- */
 .hero {
     width: 100%;
-    background-color: #405d85;   /* blue bg fills entire screen width */
+    background-color: #405d85 !important; /* blue only here */
     display: flex;
     justify-content: center;
-    overflow: hidden;            /* prevents accidental white gaps */
+    overflow: hidden;
 }
 
 .hero-inner {
     width: 100%;
-    max-width: 1800px;           /* optional: keeps inside centered */
+    max-width: 1800px;
     display: flex;
 }
 
@@ -21,23 +28,23 @@
     object-fit: contain;
 }
 
-/* --------- REMOVE default white margin if any CSS adds it ---------- */
-body, html {
-    margin: 0;
-    padding: 0;
-}
-
-
 /* -------------------- CAROUSEL ---------------------- */
-
 .latest-artworks-carousel {
     text-align: center;
+    background: #ffffff !important;
 }
 
 .carousel-wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.carousel-btn {
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
 }
 
 .carousel-track {
@@ -49,12 +56,13 @@ body, html {
 .carousel-item {
     min-width: 300px;
     margin: 10px;
+    background: #ffffff !important;
 }
 
 /* ---------------- FEATURED ARTISTS ------------------ */
-
 .featured-artists {
     text-align: center;
+    background: #ffffff !important;
 }
 
 .artist-grid {
@@ -64,7 +72,6 @@ body, html {
 }
 
 /* ---------------- POPUP ------------------ */
-
 .overlay {
     display: none;
 }
@@ -79,8 +86,13 @@ body, html {
 }
 
 /* ---------------- BACK TO TOP ------------------ */
-
 .back-to-top-container {
     text-align: center;
     margin: 20px 0;
+    background: #ffffff !important;
+}
+
+/* ---------------- OTHER SECTIONS FORCE WHITE ---------------- */
+section, main, footer, header, nav, .divider {
+    background: #ffffff !important;
 }
