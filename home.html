@@ -1,331 +1,186 @@
-/* headings */
-h1, h2, h3 {
- font-family: var(--font-serif);
- color: #111;
- letter-spacing: 0.2px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lustre | Home</title>
 
-h1 { font-size: 2.2rem; font-weight: 600; }
-h2 { font-size: 1.8rem; font-weight: 600; }
+   <!-- icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-/* HERO SECTION */
-.hero {
-  background: url("web hero bg.png") no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--gold);
-}
+   <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-.hero h1 {
-  font-size: 4em;
-  font-style: italic;
-  margin-bottom: 0.3em;
-  color: var(--gold);
-  letter-spacing: 1px;
-}
+   <!-- css links -->
+   <link rel="stylesheet" href="css/universal.css">
+   <link rel="stylesheet" href="css/home.css">
+</head>
 
-.hero p {
-  font-size: 1.5em;
-  color: var(--text);
-  font-style: italic;
-}
+<body id="top">
 
-/* Latest Artworks */
-.latest-artworks-carousel {
-  padding: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+<header>
+   <div class="logo">
+       <a href="home.html" class="logo-link" aria-label="Lustre Home">
+           <span class="logo-mark">LUSTRE</span>
+       </a>
+   </div>
 
-.latest-artworks-carousel h2 {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
+   <nav>
+       <button class="close-nav" id="closeNav" aria-label="Close Menu">
+           <i class="fa-solid fa-xmark"></i>
+       </button>
 
-.carousel-wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+       <a href="home.html">HOME</a>
+       <a href="graphic-designs.html">GRAPHIC DESIGNS</a>
+       <a href="3d-models.html">3D MODELS</a>
+       <a href="2d-animations.html">2D ANIMATIONS</a>
+       <button class="signup-blue" onclick="window.location.href='sign-up.html'">SIGN UP</button>
+   </nav>
 
-.carousel-track {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 1rem 2rem;
-  scroll-behavior: smooth;
-  max-width: 1000px;
-  margin: 0 auto;
-}
+   <button class="burger" id="burgerButton" aria-label="Menu">
+       <i class="fa-solid fa-bars"></i>
+   </button>
+</header>
 
-/* Hide carousel scrollbar */
-.carousel-track {
-  scrollbar-width: none;       /* Firefox */
-  -ms-overflow-style: none;    /* IE/Edge */
-}
+<!-- HERO SECTION (UPDATED) -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <img src="lustre hero.png" alt="Lustre Hero Banner" class="hero-image">
+</section>
 
-.carousel-track::-webkit-scrollbar {
-  display: none;               /* Chrome, Safari, Edge */
-}
+<div class="divider">
+  <span>✦</span>
+</div>
 
-.carousel-item {
-  flex: 0 0 320px;
-  scroll-snap-align: start;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 1rem;
-  background: #fff;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+<main>
 
-.carousel-item:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
+<section class="latest-artworks-carousel">
+    <h2>LATEST ARTWORKS</h2>
 
-.carousel-item img,
-.carousel-item video {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
+    <div class="carousel-wrapper">
+        <button class="carousel-btn left" aria-label="Scroll Left">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
 
-/* Navigation arrows for carousel */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #111;
-  color: #fff;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  transition: background 0.3s ease;
-}
+        <div class="carousel-track">
+            <div class="carousel-item">
+                <img src="gd-media/HUE-nited main pubmat.png" alt="HUE-nited Pubmat">
+                <p>"HUE-nited" Pubmat</p>
+                <p>Ianne Dela Cruz, Graphic Design</p>
+            </div>
 
-.carousel-btn:hover {
-  background: #405d85;
-}
+            <div class="carousel-item">
+                <img src="3d-media/UMBRA VALE RENDERED.jpg" alt="Umbra Vale 3D Model">
+                <p>"UMBRA VALE"</p>
+                <p>Maria Beatrice Magat, 3D Model</p>
+            </div>
 
-.carousel-btn.left {
-  left: 0.5rem;
-}
+            <div class="carousel-item">
+                <video muted>
+                    <source src="2d-media/FinalDraft_PAULIN.mp4" type="video/mp4">
+                </video>
+                <p>"The Taste Of Home"</p>
+                <p>Jonah Paulin, 2D Animation</p>
+            </div>
+        </div>
 
-.carousel-btn.right {
-  right: 0.5rem;
-}
+        <button class="carousel-btn right" aria-label="Scroll Right">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+</section>
 
-/* Featured Artists */
-.featured-artists {
-  padding: 3rem 0;
-}
+<!-- Popup -->
+<aside id="popupOverlay" class="overlay">
+    <dialog class="popup-content" open>
+        <button id="closePopup" class="close">&times;</button>
 
-.featured-artists h2 {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
+        <div class="media-container">
+            <img id="popupImage" alt="">
+            <video id="popupVideo" controls style="display:none;"></video>
+        </div>
 
-.artist-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
+        <aside class="comment-panel">
+            <div class="artwork-info">
+                <h3 id="popupTitle"></h3>
+                <p id="popupArtist"></p>
+            </div>
 
-.artist-grid > div {
-  width: 280px;
-  text-align: center;
-}
+            <div id="commentList" class="comment-list">
+                <p><em>You need an account to comment.</em></p>
+            </div>
 
-.artist-grid img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  margin: 0 auto 1.5rem auto;
-}
+            <div class="add-comment">
+                <textarea id="commentInput" placeholder="Add a comment..." disabled></textarea>
+                <button id="postComment" disabled>Post</button>
+            </div>
+        </aside>
+    </dialog>
+</aside>
 
-.artist-grid a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #405d85;
-  text-decoration: none;
-  font-weight: 500;
-}
+<div class="divider">
+  <span>✦</span>
+</div>
 
-/* Popup Overlay */
-.overlay {
-  display: none; /* hidden by default */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.65); /* dim background */
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-  padding: 1rem;
-}
+<section class="featured-artists">
+    <h2>FEATURED ARTISTS</h2>
 
-/* Popup Content */
-.popup-content {
-  background: #fff;       /* no black border */
-  color: #111;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 900px;
-  max-height: 90vh;
-  display: flex;
-  gap: 2rem;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-  position: relative;
-}
+    <div class="artist-grid">
+        <div>
+            <img src="gd-media/iannedelacruz.jpeg" alt="Ianne Dela Cruz">
+            <p>Ianne Dela Cruz</p>
+            <p>Graphic Designer</p>
+            <a href="graphic-designs.html">See more...</a>
+        </div>
 
-/* Close Button */
-.popup-content .close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #111;
-  font-weight: 600;
-}
+        <div>
+            <img src="3d-media/PFP.JPG" alt="Maria Beatrice Magat">
+            <p>Maria Beatrice Magat</p>
+            <p>3D Modeler</p>
+            <a href="3d-models.html">See more...</a>
+        </div>
 
-/* Media Container */
-.media-container {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f5f5f5;
-  max-height: 100%;
-}
+        <div>
+            <img src="2d-media/jonahpaulin.jpg" alt="Jonah Paulin">
+            <p>Jonah Paulin</p>
+            <p>2D Animator</p>
+            <a href="2d-animations.html">See more...</a>
+        </div>
+    </div>
+</section>
 
-.media-container img,
-.media-container video {
-  max-width: 100%;
-  max-height: 80vh;
-  border-radius: 12px;
-  object-fit: contain;
-}
+</main>
 
-/* Comment Panel */
-.comment-panel {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  border-left: 1px solid #eee;
-  overflow-y: auto;
-  background: #fafafa;
-}
+<div class="back-to-top-container">
+    <a href="#top" class="back-to-top-btn" aria-label="Back to Top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+</div>
 
-/* Artwork Info on top of comment panel */
-.artwork-info {
-  margin-bottom: 1rem;
-}
+<footer>
+   <h2>FOLLOW US</h2>
 
-.artwork-info h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  color: var(--accent);
-  font-family: var(--font-serif);
-}
+   <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+   <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+   <a href="https://x.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+   <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+   <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
 
-.artwork-info p {
-  font-size: 0.95rem;
-  color: #333;
-  font-weight: 500;
-  margin: 0;
-}
+   <p>&copy; 2025 Lustre. All rights reserved.</p>
+</footer>
 
-/* Comments List */
-.comment-list {
-  flex-grow: 1;
-  margin-bottom: 0.5rem;
-}
+<script>
+document.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        document.body.classList.add("scrolled");
+    } else {
+        document.body.classList.remove("scrolled");
+    }
+});
+</script>
 
-.comment-panel p {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  color: #111;
-}
+<script src="universal.js"></script>
+<script src="home.js"></script>
 
-/* Add Comment Section */
-.add-comment {
-  display: flex;
-  flex-direction: column;
-}
-
-.comment-panel textarea {
-  width: 100%;
-  resize: none;
-  padding: 0.5rem;
-  font-size: 0.95rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-top: auto;
-}
-
-.comment-panel button {
-  margin-top: 0.5rem;
-  background-color: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.comment-panel button:hover {
-  background-color: #071e54;
-}
-
-/* Responsive for mobile */
-@media (max-width: 768px) {
-  section:nth-of-type(3) div {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .popup-content {
-    flex-direction: column;
-    max-height: 85vh;
-  }
-
-  .comment-panel {
-    border-left: none;
-    border-top: 1px solid #eee;
-    max-height: 250px;
-  }
-}
+</body>
+</html>
