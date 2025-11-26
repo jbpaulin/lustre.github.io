@@ -5,10 +5,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>Lustre | Home</title>
 
+   <!-- icons -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+   <!-- fonts -->
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+   <!-- css links -->
    <link rel="stylesheet" href="css/universal.css">
    <link rel="stylesheet" href="css/home.css">
 </head>
@@ -38,9 +41,10 @@
        </button>
    </header>
 
-   <!-- RESPONSIVE HERO -->
-   <section class="hero">
-     <img src="lustre hero.png" alt="Lustre hero banner" class="hero-image">
+   <!-- HERO SECTION -->
+   <section class="hero" aria-hidden="false">
+     <!-- Centered responsive PNG. Keep file name/path the same as your upload -->
+     <img src="lustre hero.png" alt="Lustre hero banner" class="hero-image" />
    </section>
 
    <main>
@@ -112,33 +116,43 @@
 
    <footer>
        <h2>FOLLOW US</h2>
-       <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-       <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-       <a href="https://x.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-       <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-       <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-       <p>&copy; 2025 Lustre. All rights reserved.</p>
+           <a href="https://facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+           </a>
+           <a href="https://instagram.com" target="_blank">
+               <i class="fa-brands fa-instagram"></i>
+           </a>
+           <a href="https://x.com" target="_blank">
+               <i class="fa-brands fa-twitter"></i>
+           </a>
+           <a href="https://youtube.com" target="_blank">
+               <i class="fa-brands fa-youtube"></i>
+           </a>
+           <a href="https://tiktok.com" target="_blank">
+               <i class="fa-brands fa-tiktok"></i>
+           </a>
+           <p>&copy; 2025 Lustre. All rights reserved.</p>
    </footer>
 
-   <script>
-     document.addEventListener('DOMContentLoaded', () => {
-       const track = document.querySelector('.carousel-track');
-       const btnLeft = document.querySelector('.carousel-btn.left');
-       const btnRight = document.querySelector('.carousel-btn.right');
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+   const track = document.querySelector('.carousel-track');
+   const btnLeft = document.querySelector('.carousel-btn.left');
+   const btnRight = document.querySelector('.carousel-btn.right');
 
-       if (track && btnLeft && btnRight) {
-         btnLeft.addEventListener('click', () => {
-           track.scrollBy({ left: -320, behavior: 'smooth' });
-         });
-
-         btnRight.addEventListener('click', () => {
-           track.scrollBy({ left: 320, behavior: 'smooth' });
-         });
-       }
+   if (track && btnLeft && btnRight) {
+     btnLeft.addEventListener('click', () => {
+       track.scrollBy({ left: -320, behavior: 'smooth' });
      });
-   </script>
 
-   <script src="universal.js"></script>
-   <script src="home.js"></script>
+     btnRight.addEventListener('click', () => {
+       track.scrollBy({ left: 320, behavior: 'smooth' });
+     });
+   }
+ });
+</script>
+
+<script src="universal.js"></script>
+<script src="home.js"></script>
 </body>
 </html>
