@@ -5,32 +5,38 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Lustre | Graphic Designs</title>
 
-
    <!-- icons -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-   <!-- css link -->
+    <!-- css links -->
+    <link rel="stylesheet" href="css/universal.css">
     <link rel="stylesheet" href="css/graphic-designs.css">
 </head>
 
-
 <body id="top">
    <header>
-       <!-- Serif logo lockup (text) for an elegant catalog feel -->
        <div class="logo">
            <a href="home.html" class="logo-link" aria-label="Lustre Home">
                <span class="logo-mark">LUSTRE</span>
            </a>
        </div>
-       <!-- pwede rin yung ano parang text lang na logo -->
-       <nav>
-           <a href="home.html">HOME</a>
-           <a href="graphic-designs.html">GRAPHIC DESIGNS</a>
-           <a href="3d-models.html">3D MODELS</a>
-           <a href="2d-animations.html">2D ANIMATIONS</a>
-           <button class="signup-blue" onclick="window.location.href='sign-up.html'">SIGN UP</button>
-       </nav>
+        <nav>
+            <button class="close-nav" id="closeNav" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <a href="home.html">HOME</a>
+            <a href="graphic-designs.html">GRAPHIC DESIGNS</a>
+            <a href="3d-models.html">3D MODELS</a>
+            <a href="2d-animations.html">2D ANIMATIONS</a>
+            <button class="signup-blue" onclick="window.location.href='sign-up.html'">SIGN UP</button>
+        </nav>
+        <button class="burger" id="burgerButton" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
    </header>
 
    <main>
@@ -85,22 +91,28 @@
            </div>
        </section>
 
-       <aside id="popupOverlay" class="overlay">
-           <dialog class="popup-content" open>
-               <button id="closePopup" class="close">&times;</button>
-               <div class="media-container">
-                   <img id="popupImage" alt="">
-               </div>
-               <aside class="comment-panel">
-                   <h3>Comments</h3>
-                   <div id="commentList" class="comment-list"></div>
-                   <div class="add-comment">
-                       <textarea id="commentInput" placeholder="Add a comment..."></textarea>
-                       <button id="postComment">Post</button>
-                   </div>
-               </aside>
-           </dialog>
-       </aside>
+        <aside id="popupOverlay" class="overlay">
+            <dialog class="popup-content">
+                <button id="closePopup" class="close">&times;</button>
+
+                <div class="media-container">
+                <img id="popupImage" alt="">
+                </div>
+
+                <aside class="comment-panel">
+                <div class="artwork-info">
+                    <h3 id="popupTitle">Artwork Title</h3>
+                    <p id="popupArtist">Artist Name</p>
+                </div>
+                <h3>Comments</h3>
+                <div id="commentList" class="comment-list"></div>
+                <div class="add-comment">
+                    <textarea id="commentInput" placeholder="Add a comment..."></textarea>
+                    <button id="postComment">Post</button>
+                </div>
+                </aside>
+            </dialog>
+        </aside>
 
        <!-- Back to Top Button: fixed bottom right -->
        <div class="back-to-top-container">
@@ -130,5 +142,8 @@
            <p>&copy; 2025 Lustre. All rights reserved.</p>
    </footer>
 </body>
+
+<script src="universal.js"></script>
+<script src="catalog.js"></script>
 </html>
 
