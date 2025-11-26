@@ -8,31 +8,18 @@ h1, h2, h3 {
 h1 { font-size: 2.2rem; font-weight: 600; }
 h2 { font-size: 1.8rem; font-weight: 600; }
 
-/* HERO SECTION */
+/* HERO SECTION — replaced with hero image */
 .hero {
-  background: url("web hero bg.png") no-repeat center center;
-  background-size: cover;
+  width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--gold);
+  overflow: hidden;
+  position: relative;
 }
 
-.hero h1 {
-  font-size: 4em;
-  font-style: italic;
-  margin-bottom: 0.3em;
-  color: var(--gold);
-  letter-spacing: 1px;
-}
-
-.hero p {
-  font-size: 1.5em;
-  color: var(--text);
-  font-style: italic;
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Latest Artworks */
@@ -68,14 +55,13 @@ h2 { font-size: 1.8rem; font-weight: 600; }
   margin: 0 auto;
 }
 
-/* Hide carousel scrollbar */
 .carousel-track {
-  scrollbar-width: none;       /* Firefox */
-  -ms-overflow-style: none;    /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .carousel-track::-webkit-scrollbar {
-  display: none;               /* Chrome, Safari, Edge */
+  display: none;
 }
 
 .carousel-item {
@@ -103,7 +89,6 @@ h2 { font-size: 1.8rem; font-weight: 600; }
   margin-bottom: 1rem;
 }
 
-/* Navigation arrows for carousel */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -127,13 +112,8 @@ h2 { font-size: 1.8rem; font-weight: 600; }
   background: #405d85;
 }
 
-.carousel-btn.left {
-  left: 0.5rem;
-}
-
-.carousel-btn.right {
-  right: 0.5rem;
-}
+.carousel-btn.left { left: 0.5rem; }
+.carousel-btn.right { right: 0.5rem; }
 
 /* Featured Artists */
 .featured-artists {
@@ -177,22 +157,21 @@ h2 { font-size: 1.8rem; font-weight: 600; }
 
 /* Popup Overlay */
 .overlay {
-  display: none; /* hidden by default */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.65); /* dim background */
+  background: rgba(0,0,0,0.65);
   justify-content: center;
   align-items: center;
   z-index: 2000;
   padding: 1rem;
 }
 
-/* Popup Content */
 .popup-content {
-  background: #fff;       /* no black border */
+  background: #fff;
   color: #111;
   border-radius: 16px;
   width: 90%;
@@ -205,7 +184,6 @@ h2 { font-size: 1.8rem; font-weight: 600; }
   position: relative;
 }
 
-/* Close Button */
 .popup-content .close {
   position: absolute;
   top: 1rem;
@@ -218,7 +196,6 @@ h2 { font-size: 1.8rem; font-weight: 600; }
   font-weight: 600;
 }
 
-/* Media Container */
 .media-container {
   flex: 2;
   display: flex;
@@ -236,7 +213,6 @@ h2 { font-size: 1.8rem; font-weight: 600; }
   object-fit: contain;
 }
 
-/* Comment Panel */
 .comment-panel {
   flex: 1;
   display: flex;
@@ -247,7 +223,6 @@ h2 { font-size: 1.8rem; font-weight: 600; }
   background: #fafafa;
 }
 
-/* Artwork Info on top of comment panel */
 .artwork-info {
   margin-bottom: 1rem;
 }
@@ -267,7 +242,6 @@ h2 { font-size: 1.8rem; font-weight: 600; }
   margin: 0;
 }
 
-/* Comments List */
 .comment-list {
   flex-grow: 1;
   margin-bottom: 0.5rem;
@@ -279,7 +253,6 @@ h2 { font-size: 1.8rem; font-weight: 600; }
   color: #111;
 }
 
-/* Add Comment Section */
 .add-comment {
   display: flex;
   flex-direction: column;
@@ -311,7 +284,6 @@ h2 { font-size: 1.8rem; font-weight: 600; }
   background-color: #071e54;
 }
 
-/* Responsive for mobile */
 @media (max-width: 768px) {
   section:nth-of-type(3) div {
     flex-direction: column;
